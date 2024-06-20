@@ -9,11 +9,18 @@ function App() {
     WebApp.CloudStorage?.getItem("count", (error, result) => {setCount(error ? 0 : Number(result)); console.log(result)});
   }, []);
   
-  // const count = 0;
+  useEffect(() => {
+    const delayDebounceFn = setTimeout(() => {
+      WebApp.CloudStorage.setItem("count", String(count), (error, result) => WebApp.showAlert(`aboba ${error} ${result}`));
+    }, 3000)
 
+    return () => clearTimeout(delayDebounceFn)
+  }, [count])
+  
   const click = () => {
     const sum = count + 1;
 
+    setCount(sum);
     WebApp.CloudStorage.setItem("count", String(sum), (error, result) => WebApp.showAlert(`aboba ${error} ${result}`));
   }
 
