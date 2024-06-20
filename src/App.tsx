@@ -21,7 +21,7 @@ function App() {
     const sum = count + 1;
 
     setCount(sum);
-    WebApp.CloudStorage.setItem("count", String(sum), (error, result) => WebApp.showAlert(`aboba ${error} ${result}`));
+    // WebApp.CloudStorage.setItem("count", String(sum), (error, result) => WebApp.showAlert(`aboba ${error} ${result}`));
   }
 
   return (
