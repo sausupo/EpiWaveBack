@@ -1,14 +1,20 @@
+import { useEffect, useState } from 'react';
 import './App.css'
 import WebApp from '@twa-dev/sdk'
 
 function App() {
-  // const [count, setCount] = useState(0)
-  const count = WebApp.CloudStorage.getItem("count") as unknown as string;
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    WebApp.CloudStorage?.getItem("count", (error, result) => {setCount(error ? 0 : Number(result)); console.log(result)});
+  }, []);
+  
+  // const count = 0;
 
   const click = () => {
-    const sum = Number(count) + 1;
+    const sum = count + 1;
 
-    WebApp.CloudStorage.setItem("count", String(sum));
+    WebApp.CloudStorage.setItem("count", String(sum), (error, result) => WebApp.showAlert(`aboba ${error} ${result}`));
   }
 
   return (
@@ -24,7 +30,7 @@ function App() {
       <h1>{`Привет ${WebApp.initDataUnsafe?.user?.last_name} ${WebApp.initDataUnsafe?.user?.first_name}`}</h1>
       <div className="card">
         <button onClick={click}>
-          count is {count}
+          count is {count || 0}
         </button>
       </div>
         {/* Here we add our button with alert callback */}
