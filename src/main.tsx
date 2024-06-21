@@ -4,6 +4,7 @@ import App from './App.tsx'
 import './index.css'
 import WebApp from '@twa-dev/sdk';
 
+WebApp.MainButton.hide();
 WebApp.ready();
 WebApp.expand();
 
