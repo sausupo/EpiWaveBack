@@ -9,7 +9,7 @@ export default function TgAppRoutes(): JSX.Element {
   if (checkIsFromTgInfo()) {
     return (
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         {/* <Route path="/" element={<Navigate to={AppRoutes.HOME} />} />
                 <Route path="/" element={<Navigate to={AppRoutes.HOME} />} /> */}
       </Routes>
