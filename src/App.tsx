@@ -4,7 +4,6 @@ import WebApp from "@twa-dev/sdk";
 import { useUserData } from "./store";
 import { Header } from "./widgets/Header";
 import { BottomNavigation } from "./widgets/BottomNavigation";
-import { TgAppRouteNames } from "./shared/routes";
 import TgAppRoutes from "./routes/tgAppRoutes/ui/TgAppRoutes";
 
 function App() {
