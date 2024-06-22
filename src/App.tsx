@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './App.css'
 import WebApp from '@twa-dev/sdk'
 import { useUserData } from './store';
