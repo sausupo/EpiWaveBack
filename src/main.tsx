@@ -5,7 +5,6 @@ import './index.css'
 import WebApp from '@twa-dev/sdk';
 import 'normalize.css';
 
-WebApp.MainButton.hide();
 WebApp.ready();
 WebApp.expand();
 
