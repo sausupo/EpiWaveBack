@@ -1,8 +1,11 @@
 .navbar {
+    margin: 16px;
     display: flex;
     margin-top: auto;
     background-color: green;
     justify-content: center;
+    gap: 16px;
+    border-radius: 16px;
 }
 
 /* Style the links inside the navigation bar */

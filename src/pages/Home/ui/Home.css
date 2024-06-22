@@ -1,0 +1,19 @@
+.home {
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.count {
+    font-size: 32px;
+}
+
+.clicker {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: aqua;
+}

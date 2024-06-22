@@ -1,22 +1,24 @@
-import { useEffect } from 'react';
-import './App.css'
-import WebApp from '@twa-dev/sdk'
-import { useUserData } from './store';
-import { Header } from './widgets/Header';
-import { BottomNavigation } from './widgets/BottomNavigation';
+import { useEffect } from "react";
+import "./App.css";
+import WebApp from "@twa-dev/sdk";
+import { useUserData } from "./store";
+import { Header } from "./widgets/Header";
+import { BottomNavigation } from "./widgets/BottomNavigation";
+import { TgAppRouteNames } from "./shared/routes";
+import TgAppRoutes from "./routes/tgAppRoutes/ui/TgAppRoutes";
 
 function App() {
   // const [count, setCount] = useState(0);
   const { init } = useUserData((state) => state);
 
   useEffect(() => {
-    init(WebApp.initDataUnsafe.user ?? {} as any);
+    init(WebApp.initDataUnsafe.user ?? ({} as any));
   }, []);
 
   // useEffect(() => {
   //   WebApp.CloudStorage?.getItem("count", (error, result) => {setCount(error ? 0 : Number(result)); console.log(result)});
   // }, []);
-  
+
   // useEffect(() => {
   //   const delayDebounceFn = setTimeout(() => {
   //     WebApp.CloudStorage.setItem("count", String(count), (error, result) => WebApp.showAlert(`aboba ${error} ${result}`));
@@ -24,7 +26,7 @@ function App() {
 
   //   return () => clearTimeout(delayDebounceFn)
   // }, [count])
-  
+
   // const click = () => {
   //   const sum = count + 1;
 
@@ -34,7 +36,7 @@ function App() {
 
   return (
     <>
-    <Header/>
+      <Header />
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -49,19 +51,20 @@ function App() {
           count is {count || 0}
         </button>
       </div> */}
-        {/* Here we add our button with alert callback */}
+      {/* Here we add our button with alert callback */}
       {/* <div className="card">
         <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
             Show Alert
         </button>
         <div>sfsafsfs {WebApp.initDataUnsafe?.user?.username}</div>
       </div> */}
-      <BottomNavigation/>
+      <TgAppRoutes />
+      <BottomNavigation />
       <div id="viewport"></div>
       <div id="viewport-params-size"></div>
       <div id="viewport-params-expand"></div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
