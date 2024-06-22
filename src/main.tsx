@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import WebApp from '@twa-dev/sdk';
+import 'normalize.css';
 
 WebApp.ready();
 WebApp.expand();
