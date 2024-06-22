@@ -1,5 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import { TgAppRouteNames } from "../../../shared/routes";
+import { Route, Routes } from "react-router-dom";
 import Home from "../../../pages/Home/ui/Home";
 
 export default function TgAppRoutes(): JSX.Element {
