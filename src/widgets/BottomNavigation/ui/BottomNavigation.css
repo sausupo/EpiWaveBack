@@ -1,32 +1,48 @@
 .navbar {
-    margin: 16px;
+    /* margin: 16px 64px; */
+    /* padding: 8px; */
     display: flex;
     margin-top: auto;
-    background-color: var(--tg-theme-button-color);
+    /* background-color: var(--second-black); */
     justify-content: center;
     gap: 16px;
     border-radius: 16px;
 }
 
-/* Style the links inside the navigation bar */
-.navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .navbar a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
+.menu {
+  display: flex;
+  gap: 4px;
+  background-color: var(--second-black);
+  border-radius: 16px;
+  margin: 8px;
+  padding: 4px;
+}
+
+.bloc-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 4px 12px;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 400;
+  /* background-color: #292929; */
+}
+
+.bloc-active {
+  background-color: #262521;
+}
+/* 
+.bloc-icon img {
+  color: var(--white);
+  width: 30px;
+} */
+
+.navbar--icon {
+  /* stroke: var(--white); */
+  fill: var(--white);
+  width: 30px;
+  height: 30px;
+}

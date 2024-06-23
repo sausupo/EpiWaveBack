@@ -7,7 +7,6 @@ import { BottomNavigation } from "./widgets/BottomNavigation";
 import TgAppRoutes from "./routes/tgAppRoutes/ui/TgAppRoutes";
 
 function App() {
-  // const [count, setCount] = useState(0);
   const { init } = useUserData((state) => state);
 
   useEffect(() => {
@@ -59,9 +58,9 @@ function App() {
       </div> */}
       <TgAppRoutes />
       <BottomNavigation />
-      <div id="viewport"></div>
+      {/* <div id="viewport"></div>
       <div id="viewport-params-size"></div>
-      <div id="viewport-params-expand"></div>
+      <div id="viewport-params-expand"></div> */}
     </>
   );
 }

@@ -8,6 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 
 WebApp.ready();
 WebApp.expand();
+WebApp.setHeaderColor("#0E0E0E");
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
