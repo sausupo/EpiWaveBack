@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./Home.css";
 import coin from "../../../assets/coin.png"
 import WebApp from "@twa-dev/sdk";
+// import clicker from "../../../../public/clickerv2.png";
+import clicker from "../../../assets/clicker.png";
 
 export default function Home(): JSX.Element {
   const [count, setCount] = useState(5000);
@@ -19,7 +21,7 @@ export default function Home(): JSX.Element {
         
       </div>
       <div className="home-page__clicker" onTouchStart={click}>
-      {/* <img src={clicker} alt="coin"/> */}
+      <img src={clicker} className="home-page__ff" alt="coin"/>
       </div>
     </div>
   );

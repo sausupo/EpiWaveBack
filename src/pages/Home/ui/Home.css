@@ -28,11 +28,24 @@
 
 .home-page__clicker {
     /* height: 100%; */
-    width: 100%;
-    background: url("/clickerv2.png") center no-repeat;
+    /* width: 100%; */
+    /* background: url("/clickerv2.png") center no-repeat; */
     background-size: contain;
-    /* width: 300px; */
+    width: 300px;
     height: 300px;
-    /* border-radius: 50%; */
-    /* background-color: aqua; */
+    /* border-radius: 100%; */
+    /* border: 16px solid #cb3737; */
+    /* border-image: linear-gradient(#f6b73c, #4d9f0c) 30; */
+    /* background-color: #ee6f57; */
+    /* border-image: linear-gradient(#f6b73c, #4d9f0c) 1; */
+    /* background: radial-gradient(#ee6f57, #883F32); */
+    background: radial-gradient(#ee6f57, #883F32) padding-box,
+              linear-gradient(125deg, #CB3737, #651B1B) border-box;
+  border-radius: 100%;
+  border: 16px solid transparent;
+}
+
+.home-page__ff {
+    height: 100%;
+    width: 100%;
 }
