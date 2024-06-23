@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./BottomNavigation.css";
 import { useNavigate } from "react-router-dom";
-import { AppRoutes, TgAppRouteNames } from "../../../shared/routes";
+import { TgAppRouteNames, AppRoutes } from "../../../shared/routes";
 
 export default function BottomNavigation(): JSX.Element {
   const navigate = useNavigate();
