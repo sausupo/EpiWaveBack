@@ -27,8 +27,12 @@
 }
 
 .home-page__clicker {
+    /* height: 100%; */
+    width: 100%;
+    background: url("/clickerv2.png") center no-repeat;
+    background-size: contain;
+    /* width: 300px; */
     height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    background-color: aqua;
+    /* border-radius: 50%; */
+    /* background-color: aqua; */
 }

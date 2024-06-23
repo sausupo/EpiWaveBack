@@ -85,6 +85,7 @@ button:focus-visible {
   font-weight: 400;
   color: var(--white);
   background-color: var(--black);
+
   -webkit-user-select: none; /* Chrome/Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE/Edge */
@@ -99,3 +100,21 @@ html, body, #root {
   display: flex;
   flex-direction: column;
  }
+
+.filter {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  z-index: -10;
+  position: absolute;
+}
+
+.video {
+  /* height: 100%; */
+  width: 100%;
+  float: left;
+  top: 0;
+  padding: none;
+  position: fixed;
+  z-index: -100;
+}

@@ -5,6 +5,7 @@ import { useUserData } from "./store";
 import { Header } from "./widgets/Header";
 import { BottomNavigation } from "./widgets/BottomNavigation";
 import TgAppRoutes from "./routes/tgAppRoutes/ui/TgAppRoutes";
+import bg from "./assets/bg.mp4";
 
 function App() {
   const { init } = useUserData((state) => state);
@@ -34,6 +35,10 @@ function App() {
 
   return (
     <>
+      <div className="filter"/>
+      <video className='video' autoPlay loop muted>
+        <source src={bg} type='video/mp4' />
+      </video>
       <Header />
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Home.css";
-import coin from "../../../assets/avatar-svgrepo-com.svg"
+import coin from "../../../assets/coin.png"
 
 export default function Home(): JSX.Element {
   const [count, setCount] = useState(5000);
@@ -15,7 +15,9 @@ export default function Home(): JSX.Element {
         <img src={coin} alt="coin" className="home-page__coin"/>
         <div className="home-page__count">{count}</div>
       </div>
-      <div className="home-page__clicker" onTouchStart={click} />
+      <div className="home-page__clicker" onTouchStart={click}>
+      {/* <img src={clicker} alt="coin"/> */}
+      </div>
     </div>
   );
 }
