@@ -2,7 +2,7 @@
     margin: 16px;
     display: flex;
     margin-top: auto;
-    background-color: var(--button_color);
+    background-color: var(--tg-theme-button-color);
     justify-content: center;
     gap: 16px;
     border-radius: 16px;
