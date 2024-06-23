@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./BottomNavigation.css";
 import { useNavigate } from "react-router-dom";
 import { TgAppRouteNames, AppRoutes } from "../../../shared/routes";
+import WebApp from "@twa-dev/sdk";
 
 export default function BottomNavigation(): JSX.Element {
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ export default function BottomNavigation(): JSX.Element {
 
   const handleClick = (key: TgAppRouteNames) => {
     setCurrentPage(key);
+    WebApp.HapticFeedback.impactOccurred("medium");
     navigate(AppRoutes[key as TgAppRouteNames].path);
   };
 
