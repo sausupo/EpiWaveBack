@@ -77,6 +77,11 @@ button:focus-visible {
   color-scheme: var(--tg-color-scheme);
 } */
 
+:root {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
 a {
   color: var(--tg-theme-link-color);
 }
