@@ -23,9 +23,9 @@ export default function Home(): JSX.Element {
         <button style={{height: "100px", width: "100px"}} onClick={() => WebApp.HapticFeedback.impactOccurred("medium")}>medium</button>
         <button style={{height: "100px", width: "100px"}} onClick={() => WebApp.HapticFeedback.impactOccurred("rigid")}>rigid</button>
         <button style={{height: "100px", width: "100px"}} onClick={() => WebApp.HapticFeedback.impactOccurred("soft")}>soft</button>
-      {/* <div className="home-page__clicker" onTouchStart={click}> */}
+      <div className="home-page__clicker" onTouchStart={click}>
       {/* <img src={clicker} alt="coin"/> */}
-      {/* </div> */}
+      </div>
     </div>
   );
 }
