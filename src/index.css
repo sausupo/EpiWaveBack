@@ -85,6 +85,10 @@ button:focus-visible {
   font-weight: 400;
   color: var(--white);
   background-color: var(--black);
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Стандартный синтаксис */
 }
 
 html, body, #root {
