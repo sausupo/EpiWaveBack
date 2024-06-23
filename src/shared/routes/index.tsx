@@ -8,8 +8,6 @@ export enum TgAppRouteNames {
   HOME = "home",
   TASKS = "tasks",
   REFERALS = "referals",
-  // SECOND = "second",
-  // ABOBA = "aboba"
 }
 
 type Page = {
@@ -27,14 +25,14 @@ export const AppRoutes: Record<TgAppRouteNames, Page> = {
     svg: HomeIcon,
   },
   [TgAppRouteNames.TASKS]: {
-    path: "*",
+    path: "/tasks",
     label: "Tasks",
     element: <Home />,
     svg: TasksIcons,
   },
   [TgAppRouteNames.REFERALS]: {
-    path: "*",
-    label: "Referals",
+    path: "/friends",
+    label: "Friends",
     element: <Home />,
     svg: ReferalsIcon,
   },
