@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <div className="filter"/>
-      <video className='video' autoPlay loop muted>
+      <video className='video' playsInline autoPlay loop muted>
         <source src={bg} type='video/mp4' />
       </video>
       <Header />
