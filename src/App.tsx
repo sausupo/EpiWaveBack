@@ -5,34 +5,30 @@ import { useUserData } from "./store";
 import { Header } from "./widgets/Header";
 import { BottomNavigation } from "./widgets/BottomNavigation";
 import TgAppRoutes from "./routes/tgAppRoutes/ui/TgAppRoutes";
-import bgInit from "./assets/bg-init.mp4";
-import bgMain from "./assets/bg-main.mp4";
+import bgMain from "./assets/bg-init.mp4";
 
 function App() {
   const { init } = useUserData((state) => state);
 
-  const videoRef1 = useRef<HTMLVideoElement>(null);
+  // const videoRef1 = useRef<HTMLVideoElement>(null);
   const videoRef2 = useRef<HTMLVideoElement>(null);
   
-  const handleEnded = () => {
-    if (videoRef2.current && videoRef1.current) {
-      videoRef2.current.style.display = 'block';
-      videoRef1.current.style.display = 'none';
-      videoRef2.current.play();
-    }
-  };
+  // const handleEnded = () => {
+  //   if (videoRef2.current && videoRef1.current) {
+  //     videoRef2.current.style.display = 'block';
+  //     videoRef1.current.style.display = 'none';
+  //     videoRef2.current.play();
+  //   }
+  // };
 
   useEffect(() => {
-    if (videoRef1.current) {
-      videoRef1.current.play();
-    }
     init(WebApp.initDataUnsafe.user ?? ({} as any));
   }, []);
 
   return (
     <>
       <div className="filter"/>
-      <video
+      {/* <video
         ref={videoRef1}
         className='video'
         playsInline
@@ -41,14 +37,14 @@ function App() {
       >
       <source src={bgInit} type="video/mp4" />
       Your browser does not support the video tag.
-    </video>
+    </video> */}
     <video
         ref={videoRef2}
         className='video'
         playsInline
         muted 
-        // autoPlay
-        style={{ display: 'none' }}
+        autoPlay
+        // style={{ display: 'none' }}
         loop
       >
       <source src={bgMain} type="video/mp4" />

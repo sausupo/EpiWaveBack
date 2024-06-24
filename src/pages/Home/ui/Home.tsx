@@ -18,10 +18,11 @@ export default function Home(): JSX.Element {
       <div className="home-page__balance">
         <img src={coin} alt="coin" className="home-page__coin"/>
         <div className="home-page__count">{count}</div>
-        
       </div>
       <div className="home-page__clicker" onTouchStart={click}>
-      <img src={clicker} className="home-page__ff" alt="coin"/>
+        <div className="glass">
+          <img src={clicker} className="home-page__ff" alt="coin"/>
+        </div>
       </div>
     </div>
   );
