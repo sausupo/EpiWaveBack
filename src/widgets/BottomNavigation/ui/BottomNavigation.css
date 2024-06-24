@@ -1,6 +1,4 @@
 .navbar {
-    /* margin: 16px 64px; */
-    /* padding: 8px; */
     display: flex;
     margin-top: auto;
     /* background-color: var(--second-black); */
@@ -28,20 +26,14 @@
   gap: 4px;
   font-size: 10px;
   font-weight: 400;
-  /* background-color: #292929; */
+  background-color: #292929;
 }
 
 .bloc-active {
   background-color: #262521;
 }
-/* 
-.bloc-icon img {
-  color: var(--white);
-  width: 30px;
-} */
 
 .navbar--icon {
-  /* stroke: var(--white); */
   fill: var(--white);
   width: 30px;
   height: 30px;
