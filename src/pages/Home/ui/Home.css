@@ -39,8 +39,8 @@
     /* background-color: #ee6f57; */
     /* border-image: linear-gradient(#f6b73c, #4d9f0c) 1; */
     /* background: radial-gradient(#ee6f57, #883F32); */
-    background: radial-gradient(#9F4A49, #6B1716) padding-box,
-              linear-gradient(#A93836, #8F1E1D) border-box;
+    background: radial-gradient(#DDDDDD, #292929) padding-box,
+              linear-gradient(#FDFDFD, #888888) border-box;
   border-radius: 100%;
   border: 16px solid transparent;
 }
