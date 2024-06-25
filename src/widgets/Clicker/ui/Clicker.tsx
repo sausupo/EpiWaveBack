@@ -4,9 +4,10 @@ import clicker from "../../../assets/clicker.png";
 import "./Clicker.css";
 import { useState } from "react";
 import { INCREMENT_VALUE } from "../../../shared/config";
+import { v4 as uuidv4 } from 'uuid';
 
 interface NumberPosition {
-  id: number;
+  id: string;
   left: number;
   top: number;
 }
@@ -24,7 +25,8 @@ export default function Clicker(): JSX.Element {
     const { touches } = event; // Получение данных о касании
     const touch = touches[0]; // Берем только первое касание
     const newNumber: NumberPosition = {
-      id: new Date().getTime(), // Уникальный идентификатор для числа
+      // id: new Date().getTime(),
+      id: uuidv4(),
       left: touch.clientX, // Позиция числа по горизонтали
       top: touch.clientY, // Позиция числа по вертикали
     };
@@ -32,7 +34,7 @@ export default function Clicker(): JSX.Element {
     // setScaleX(0.98);
   };
 
-  const removeNumber = (id: number) => {
+  const removeNumber = (id: string) => {
     setNumbers(numbers.filter((num) => num.id !== id));
   };
 
