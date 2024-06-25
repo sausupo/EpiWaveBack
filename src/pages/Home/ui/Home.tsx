@@ -1,5 +1,5 @@
 import "./Home.css";
-import coin from "../../../assets/coin.png"
+import coin from "../../../assets/coin.svg"
 import { Clicker } from "../../../widgets/Clicker";
 import useClicker from "../../../store/useClicker";
 
