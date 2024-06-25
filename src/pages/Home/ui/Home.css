@@ -7,6 +7,12 @@
     gap: 24px;
 }
 
+.home-page__name {
+    /* margin-bottom: 24px; */
+    font-size: 32px;
+    font-weight: 700;
+}
+
 .home-page__balance {
     display: flex;
     flex-direction: row;

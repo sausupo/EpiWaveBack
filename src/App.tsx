@@ -53,7 +53,7 @@ function App() {
       {/* <video className='video' playsInline autoPlay loop muted>
         <source src={bg} type='video/mp4' />
       </video> */}
-      <Header />
+      {/* <Header /> */}
       <TgAppRoutes />
       <BottomNavigation />
       {/* <div id="viewport"></div>
