@@ -10,11 +10,13 @@
         linear-gradient(#FDFDFD, #888888) border-box;
     border-radius: 100%;
     border: 16px solid transparent;
+    transform: scaleX(1);
 }
 
 .clicker:active {
     background: radial-gradient(#DDDDDD, #313131) padding-box,
         linear-gradient(#FDFDFD, #888888) border-box;
+    /* transform: scaleX(0.98); */
 }
 
 
@@ -65,12 +67,13 @@
 }
 
 .animated-number {
+    pointer-events: none;
     position: absolute;
     font-size: 24px;
     font-weight: bold;
     color: var(--white); /* Цвет чисел */
     z-index: 1000;
-    animation: moveUp 2s linear forwards;
+    animation: moveUp 1s linear forwards;
   }
 
 @keyframes moveUp {
@@ -81,6 +84,6 @@
 
     100% {
         opacity: 0;
-        transform: translateY(-100px);
+        transform: translateY(-150px);
     }
 }

@@ -16,7 +16,7 @@ export default function Clicker(): JSX.Element {
   const increment = useClicker((state) => state.increment);
 
   const [numbers, setNumbers] = useState<NumberPosition[]>([]);
-  // const [scaleX, setScaleX] = useState(1);
+  const [scaleX, setScaleX] = useState(1);
 
   const handleClick = (event: React.TouchEvent<HTMLDivElement>) => {
     increment();
@@ -31,36 +31,41 @@ export default function Clicker(): JSX.Element {
       top: touch.clientY, // Позиция числа по вертикали
     };
     setNumbers([...numbers, newNumber]); // Добавление числа в состояние
-    // setScaleX(0.98);
+    setScaleX(0.98);
   };
 
   const removeNumber = (id: string) => {
     setNumbers(numbers.filter((num) => num.id !== id));
   };
 
-  // const handleTouchEnd = () => {
-  //   setScaleX(1);
-  // };
+  const handleTouchEnd = () => {
+    setScaleX(1);
+  };
 
   return (
-    <div
-      // onTouchStart={handleClick}
-      onTouchStart={handleClick}
-      // onTouchEnd={handleTouchEnd}
-      className="clicker"
-      // style={{ transform: `scaleX(${scaleX})` }}
-    >
-      {numbers.map((number) => (
+    <>
+     {numbers.map((number) => (
         <AnimatedNumber
           key={number.id}
           number={number}
           onAnimationEnd={() => removeNumber(number.id)}
         />
+        
       ))}
+      <div
+      // onTouchStart={handleClick}
+      onTouchStart={handleClick}
+      onTouchEnd={handleTouchEnd}
+      className="clicker"
+      style={{ transform: `scaleX(${scaleX})` }}
+    >
+     
       <div className="glass">
         <img src={clicker} className="home-page__ff" alt="coin" />
       </div>
     </div>
+      </>
+    
   );
 }
 
