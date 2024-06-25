@@ -22,15 +22,19 @@ export default function Clicker(): JSX.Element {
     increment();
     WebApp.HapticFeedback.impactOccurred("light");
     const { touches } = event; // Получение данных о касании
-    console.log(touches);
-    const touch = touches[0]; // Берем только первое касание
-    const newNumber: NumberPosition = {
-      // id: new Date().getTime(),
-      id: uuidv4(),
-      left: touch.clientX, // Позиция числа по горизонтали
-      top: touch.clientY, // Позиция числа по вертикали
-    };
-    setNumbers([...numbers, newNumber]); // Добавление числа в состояние
+    const newNumbers: NumberPosition[] = []
+    for (let i = 0; i < touches.length; i++) {
+      const touch = touches[i];
+      const newNumber: NumberPosition = {
+        id: uuidv4(),
+        left: touch.clientX,
+        top: touch.clientY,
+      };
+
+      newNumbers.push(newNumber);
+    }
+
+    setNumbers([...numbers, ...newNumbers]); // Добавление числа в состояние
     setScaleX(0.98);
   };
 
