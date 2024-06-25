@@ -54,7 +54,6 @@ export default function Clicker(): JSX.Element {
           onAnimationEnd={() => removeNumber(number.id)}
         />
       ))}
-      <div className="animated-number">aboba</div>
       <div className="glass">
         <img src={clicker} className="home-page__ff" alt="coin" />
       </div>
