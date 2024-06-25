@@ -21,8 +21,8 @@ export default function Clicker(): JSX.Element {
   const handleClick = (event: React.TouchEvent<HTMLDivElement>) => {
     increment();
     WebApp.HapticFeedback.impactOccurred("light");
-    console.log(event);
     const { touches } = event; // Получение данных о касании
+    console.log(touches);
     const touch = touches[0]; // Берем только первое касание
     const newNumber: NumberPosition = {
       // id: new Date().getTime(),
@@ -44,6 +44,7 @@ export default function Clicker(): JSX.Element {
 
   return (
     <div
+      // onTouchStart={handleClick}
       onTouchStart={handleClick}
       // onTouchEnd={handleTouchEnd}
       className="clicker"

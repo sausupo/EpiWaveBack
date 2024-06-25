@@ -5,7 +5,7 @@ import { useUserData } from "./store";
 import { Header } from "./widgets/Header";
 import { BottomNavigation } from "./widgets/BottomNavigation";
 import TgAppRoutes from "./routes/tgAppRoutes/ui/TgAppRoutes";
-import bgMain from "./assets/bg-init.mp4";
+import bgMain from "./assets/bg-mainv2.mp4";
 
 function App() {
   const { init } = useUserData((state) => state);
