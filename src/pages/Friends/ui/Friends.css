@@ -16,17 +16,24 @@
 .friends-page__total {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
     width: 100%;
 }
 
 .friends-page__total__button {
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
     color: var(--white);
     background-color: var(--second-black);
     border-radius: 8px;
-    padding: 8px 16px;
+    padding: 8px 0%;
     border: 1px solid var(--white);
     margin: 0 24px;
+}
+
+.friends-page__total__button:active {
+    background-color: #262521;
 }
 
 .friends-page__total__cost {
