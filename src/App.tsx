@@ -4,7 +4,7 @@ import WebApp from "@twa-dev/sdk";
 import { useUserData } from "./store";
 import { BottomNavigation } from "./widgets/BottomNavigation";
 import TgAppRoutes from "./routes/tgAppRoutes/ui/TgAppRoutes";
-import bgMain from "./assets/bg-mainv2.mp4";
+import bgMain from "./assets/bg.mp4";
 
 function App() {
   const { init } = useUserData((state) => state);
