@@ -1,6 +1,7 @@
 import { formatNumberWithoutCurrency } from "../../../shared/funcs";
 import "./Friends.css";
 import coin from "../../../assets/coin-v2.svg";
+import WebApp from "@twa-dev/sdk";
 
 type Friend = {
   name: string;
@@ -31,6 +32,10 @@ const friends: Friend[] = [
 ];
 
 export default function Friends(): JSX.Element {
+  const handleClick = () => {
+    WebApp.HapticFeedback.impactOccurred("light");
+  }
+
   return (
     <div className="friends-page">
       <div className="friends-page__title">Friends</div>
@@ -41,7 +46,7 @@ export default function Friends(): JSX.Element {
           </div>
           <img src={coin} className="friends-page__total__cost__coin" />
         </div>
-        <button className="friends-page__total__button">invite</button>
+        <button className="friends-page__total__button" onClick={handleClick}>invite</button>
       </div>
       <div className="friends-page__list">
         {friends.map((friend) => (

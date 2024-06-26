@@ -2,6 +2,7 @@ import "./Tasks.css";
 import socialIcon from "../../../assets/avatar-svgrepo-com.svg";
 import coin from "../../../assets/coin-v2.svg";
 import { formatNumberWithoutCurrency } from "../../../shared/funcs";
+import WebApp from "@twa-dev/sdk";
 
 type Task = {
   title: string;
@@ -23,6 +24,10 @@ const tasks: Task[] = [
 ];
 
 export default function Tasks(): JSX.Element {
+  const handleClick = () => {
+    WebApp.HapticFeedback.impactOccurred("light");
+  }
+
   return (
     <div className="tasks-page">
       <div className="tasks-page__title">Tasks</div>
@@ -45,7 +50,7 @@ export default function Tasks(): JSX.Element {
               </div>
             </div>
             <div className="tasks-page__list-item__right-side">
-              <button className="tasks-page__list-item__right-side__button">
+              <button onClick={handleClick} className="tasks-page__list-item__right-side__button">
                 Start
               </button>
             </div>
