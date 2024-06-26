@@ -1,6 +1,6 @@
 import "./Tasks.css";
 import socialIcon from "../../../assets/avatar-svgrepo-com.svg";
-import coin from "../../../assets/coin-v2.svg";
+import coin from "../../../assets/coin.svg";
 import { formatNumberWithoutCurrency } from "../../../shared/funcs";
 import WebApp from "@twa-dev/sdk";
 

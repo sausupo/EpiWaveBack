@@ -1,6 +1,6 @@
 import { formatNumberWithoutCurrency } from "../../../shared/funcs";
 import "./Friends.css";
-import coin from "../../../assets/coin-v2.svg";
+import coin from "../../../assets/coin.svg";
 import WebApp from "@twa-dev/sdk";
 
 type Friend = {
