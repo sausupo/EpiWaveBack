@@ -1,8 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "../../../pages/Home/ui/Home";
+import { AppRoutes, TgAppRouteNames } from "../../../shared/routes";
 
 export default function TgAppRoutes(): JSX.Element {
-
   const checkIsFromTgInfo = () => {
     return true;
   };
@@ -10,7 +9,14 @@ export default function TgAppRoutes(): JSX.Element {
   if (checkIsFromTgInfo()) {
     return (
       <Routes>
-        <Route index path="*" element={<Home />} />
+        {Object.keys(AppRoutes).map((key) => (
+          <Route
+            // index
+            path={AppRoutes[key as TgAppRouteNames].path}
+            element={AppRoutes[key as TgAppRouteNames].element}
+          />
+        ))}
+        {/* <Route index path="*" element={<Home />} /> */}
         {/* <Route path="/" element={<Navigate to={AppRoutes.HOME} />} />
                 <Route path="/" element={<Navigate to={AppRoutes.HOME} />} /> */}
       </Routes>
