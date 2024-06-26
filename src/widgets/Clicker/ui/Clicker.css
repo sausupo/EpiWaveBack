@@ -6,15 +6,17 @@
     background-size: contain;
     width: 300px;
     height: 300px;
-    background: radial-gradient(#DDDDDD, #292929) padding-box,
-        linear-gradient(#FDFDFD, #888888) border-box;
+    /* background: radial-gradient(#DDDDDD, #292929) padding-box,
+        linear-gradient(#FDFDFD, #888888) border-box; */
+    background: radial-gradient(#DDDDDD, #000000) padding-box,
+    linear-gradient(#FDFDFD, #888888) border-box;
     border-radius: 100%;
     border: 16px solid transparent;
     transform: scaleX(1);
 }
 
 .clicker:active {
-    background: radial-gradient(#DDDDDD, #313131) padding-box,
+    background: radial-gradient(#DDDDDD, #111111) padding-box,
         linear-gradient(#FDFDFD, #888888) border-box;
     /* transform: scaleX(0.98); */
 }
