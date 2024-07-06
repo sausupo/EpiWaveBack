@@ -3,7 +3,7 @@ module.exports = {
     try {
       const {userId: result} = await pg('users')
         .insert({userId})
-        .returning(['userId']);
+        .returning('*');
 
       return result;
     } catch (_) {
