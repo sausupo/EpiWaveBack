@@ -1,0 +1,17 @@
+openapi: 3.0.0
+info:
+  description: Бэк для бота
+  title: Backend
+  version: 1.0.0
+paths:
+  /users/addUser:
+    post:
+      x-router-controller: usersController
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: './methods/users/addUser.yaml'
+      responses:
+        200:
+          description: "Авторизационные данные пользователя"

@@ -1,0 +1,10 @@
+post:
+  x-router-controller: usersController
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'components#/User'
+  responses:
+    200:
+      description: "Авторизационные данные пользователя"

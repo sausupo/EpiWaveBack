@@ -7,18 +7,24 @@ exports.up = (knex) =>
     table.integer('userId')
       .index()
       .unique();
-    table.integer('level');
+    table.integer('level')
+      .defaultTo(1);
     table.integer('energyAmount')
-      .unsigned();
+      .unsigned()
+      .defaultTo(1500);
     table.bigint('coinsAmount')
-      .unsigned();
+      .unsigned()
+      .defaultTo(0);
     table.integer('coinsPerTapAmount')
-      .unsigned();
+      .unsigned()
+      .defaultTo(1);
     table.integer('passiveCoinsAmount')
-      .unsigned();
+      .unsigned()
+      .defaultTo(0);
     table.dateTime('lastActivityTime');
     table.dateTime('energyRecoveringTill');
-    table.boolean('banned');
+    table.boolean('banned')
+      .defaultTo(false);;
 });
 
 /**
