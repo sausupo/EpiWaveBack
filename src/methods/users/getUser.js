@@ -1,5 +1,3 @@
-const {addUser} = require('./addUser');
-
 module.exports = {
   getUser: async({userId}, pg) => {
     try {
