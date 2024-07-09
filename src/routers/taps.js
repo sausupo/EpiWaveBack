@@ -2,9 +2,11 @@ const express = require('express');
 const tapsRouter = express.Router();
 const {tap} = require('../methods/taps');
 
-tapsRouter.post('/', ({body, pg}, res) => {
+tapsRouter.post('/', async({body, pg}, res) => {
   try {
-    tap(body, pg);
+    const result = await tap(body, pg);
+
+    res.send(result);
   } catch (_) {
     res.sendStatus(500);
   }
