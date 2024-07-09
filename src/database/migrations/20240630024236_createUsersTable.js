@@ -4,6 +4,9 @@
  */
 exports.up = (knex) =>
   knex.schema.createTableIfNotExists('users', (table) => {
+    table
+      .increments('id')
+      .primary();
     table.integer('userId')
       .index()
       .unique();
