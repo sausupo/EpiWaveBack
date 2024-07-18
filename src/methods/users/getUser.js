@@ -13,17 +13,19 @@ module.exports = {
         }
       }
       let result = await pg('users')
-        .where({userId});
+        .where({userId})
+        .returning('*');
 
       if (!result.length) {
         result = await pg('users')
           .insert({userId})
           .returning('*');
       }
-
+      console.log('131212312', result)
       return result;
     }
-    catch (_) {
+    catch (e) {
+      console.log(e)
       console.log('Беда..');
     }
   }
