@@ -1,7 +1,10 @@
 module.exports = {
   tap: async({userId, coinsAmount}, pg) => {
-    await pg('users')
+    const result = await pg('users')
       .update({coinsAmount})
-      .where({userId});
+      .where({userId})
+      .returning('*');
+
+    return result;
   }
 };

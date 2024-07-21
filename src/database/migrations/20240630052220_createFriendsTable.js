@@ -5,12 +5,12 @@
 exports.up = (knex) =>
   knex.schema.createTableIfNotExists('invitedFriends', (table) => {
     table.increments();
-    table.integer('userId')
+    table.text('userId')
       .index()
       .unsigned()
       .references('userId')
       .inTable('users');
-    table.integer('friendId');
+    table.text('friendId');
     table.dateTime('deletedAt');
 });
 

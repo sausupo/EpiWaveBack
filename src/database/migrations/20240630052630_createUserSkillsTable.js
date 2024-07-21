@@ -4,7 +4,7 @@
  */
 exports.up = (knex) =>
   knex.schema.createTableIfNotExists('userSkillsTable', (table) => {
-    table.integer('userId')
+    table.text('userId')
     .index()
     .unsigned()
     .references('userId')

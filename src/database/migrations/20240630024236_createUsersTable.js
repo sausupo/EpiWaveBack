@@ -7,7 +7,7 @@ exports.up = (knex) =>
     table
       .increments('id')
       .primary();
-    table.integer('userId')
+    table.text('userId')
       .index()
       .unique();
     table.integer('level')

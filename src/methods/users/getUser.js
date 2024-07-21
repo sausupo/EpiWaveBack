@@ -21,7 +21,7 @@ module.exports = {
           .insert({userId})
           .returning('*');
       }
-      console.log('131212312', result)
+
       return result;
     }
     catch (e) {
